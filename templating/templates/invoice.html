@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MH/JAN/2024/861</title>
+    
+    <!-- <link rel="stylesheet" href="sass/main.css" media="screen" charset="utf-8"/> -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta http-equiv="content-type" content="text-html; charset=utf-8">
+
+    <style type="text/css">
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font: inherit;
+            font-size: 100%;
+            vertical-align: baseline;
+        }
+
+        html {
+            line-height: 1;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin-top: 3px;
+            line-height: 1.3;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        caption,
+        th,
+        td {
+            text-align: left;
+            font-weight: normal;
+            vertical-align: middle;
+        }
+
+        q,
+        blockquote {
+            quotes: none;
+        }
+
+        q:before,
+        q:after,
+        blockquote:before,
+        blockquote:after {
+            content: "";
+            content: none;
+        }
+
+        a img {
+            border: none;
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        main,
+        menu,
+        nav,
+        section,
+        summary {
+            display: block;
+        }
+
+        @font-face {
+            font-family: 'Architecture';
+            src: url("http://127.0.0.1:5000/static/font/architecture-regular.ttf") format("truetype");
+
+        }
+
+        body {
+            font-family: 'Architecture';
+            /* font-weight: 500; */
+            font-size: 12px;
+            margin: 0;
+            padding: 0;
+            /* color: #474747; */
+            line-height: 0.9rem;
+        }
+
+        body .container {
+            min-width: 500px;
+            margin: 0 auto;
+            padding: 0 30px;
+            font-size: 10.5;
+        }
+
+        body .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        section .table-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        section .no-break {
+            page-break-inside: avoid;
+        }
+
+        section table {
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: collapse;
+            border-spacing: 5px 20px;
+        }
+
+        section table .no {
+            width: 50px;
+        }
+
+        section table .desc {
+            width: 25%;
+        }
+
+        section table td {
+            width: 15%;
+        }
+
+        section table tbody.main-head th {
+            padding: 5px;
+            border: solid 1px #bdb9b9 !important;
+            line-height: 1.4
+        }
+
+        section table tbody.main-head .table-header {
+            /* display: inline-flex; */
+            width: 100%;
+        }
+
+        section table tbody.main-head .table-header .logo {
+            border-right: none !important;
+        }
+
+        section table tbody.main-head .table-header .address {
+            border: none;
+            padding: 0px;
+            font-size: 13;
+            color: rgb(0, 0, 0);
+            /* font-weight: 700; */
+        }
+
+        section table tbody.main-head .table-header .address .address-header {
+            border: none;
+            /* font-weight: 700; */
+            font-size: 14;
+            color: rgb(0, 0, 0);
+        }
+
+        section table tbody.main-head th.logo+th {
+            border-left: none !important;
+        }
+
+        section table tbody.head {
+            vertical-align: middle;
+            border-color: inherit;
+        }
+
+        section table tbody.head th {
+            border: solid 1px #bdb9b9 !important;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            /* font-weight: 600; */
+            font-size: 10;
+            text-transform: uppercase;
+        }
+
+        section table tbody.head .top-head th {
+            vertical-align: top
+        }
+
+        section table tbody.head th div {
+            display: inline-block;
+            padding: 7px 0;
+            width: 100%;
+            /* font-size: 11px; */
+        }
+
+        section table tbody.info td {
+            padding: 5px;
+            border: solid 1px #bdb9b9 !important;
+            vertical-align: top;
+            line-height: 1.3;
+        }
+
+        section table tbody.info td .info-row {
+            display: table;
+            width: 100%;
+            vertical-align: top;
+        }
+
+        section table tbody.info td .info-row>div {
+            display: table-cell;
+            vertical-align: top;
+            width: 50%;
+        }
+
+        section table tbody.info td .info-row .title {
+            display: table-cell;
+            vertical-align: top;
+            width: 20%;
+            font-size: 12;
+        }
+
+        section table tbody.info td .info-row .content {
+            /* font-weight: 700 */
+            font-size: 11;
+        }
+
+        section table tbody.body td {
+            padding: 5px;
+            border: solid 1px #bdb9b9 !important;
+        }
+
+        section table tbody.body h3 {
+            margin-bottom: 5px;
+            color: #2e2e2e;
+            /* font-weight: 600; */
+        }
+
+        section table tbody.body h1 {
+            margin-bottom: 5px;
+            color: #2e2e2e;
+            /* font-weight: 700; */
+        }
+
+        section table tbody.footer td {
+            padding: 5px;
+            border: solid 1px #bdb9b9 !important;
+        }
+
+        section table tbody.footer td div.company-name {
+            height: 100px;
+            vertical-align: top;
+            /* font-weight: 700; */
+            font-size: 12;
+        }
+
+        section table tbody.footer td div.signature {
+            height: 150px;
+            vertical-align: bottom;
+        }
+
+        section table tbody.footer td .total-row {
+            display: table;
+            width: 100%
+        }
+
+        section table tbody.footer td .total-row>div {
+            padding: 5px;
+            display: table-cell;
+            width: 50%;
+        }
+
+        .border-bottom {
+            margin: 0px;
+            padding: 06px;
+            border-bottom: 1px solid #bdb9b9 !important;
+        }
+
+        .text-center {
+            text-align: center !important;
+        }
+
+        .text-right {
+            text-align: right !important;
+        }
+
+        .break {
+            word-break: break-word;
+            word-wrap: break-word
+        }
+
+        .bold {
+            font-size: 12
+                /* font-weight: 700 */
+        }
+
+        .p-0 {
+            padding: 0px !important;
+        }
+
+        .p-1 {
+            padding: 05px !important;
+        }
+
+        @page  {
+            margin: 50px 0px 50px 0px !important;
+        }
+    </style>
+</head>
+<!-- <foreignobject x="100" y="25"> -->
+
+<body>
+    <section>
+        <div class="container">
+            <div class="table-wrapper">
+                <table>
+                    <tbody class="main-head">
+                        <tr class="table-header">
+
+                            <th colspan="12" class="text-center address-header">
+                                <div class="address-header">
+                                    TAX INVOICE
+                                </div>
+                            </th>
+                        </tr>
+                        <tr class="table-header">
+
+                            <th colspan="12" class="text-center address">
+                                <div>
+                                    OM SAI SAFEGUARD SERVICES PVT LTD <br />
+                                    Office No 3238, 2nd Floor, Above SBI Bank,,Konark Indrayu Mall, Kondhwa Khurd,Pune,Maharashtra,411048<br />
+                                                                            Phone : 7070020202 ,
+                                                                                     Mobile : 918904330374
+                                                                                                                            E-mail : support@omsaisafeguardservi 
+                                                                                
+                                </div>
+                            </th>
+                                                    </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody class="info text-left">
+                        
+                        <tr style="font-size: 11;">
+                            <td colspan="4" class="p-0">
+                                <div class="border-bottom p-1">
+                                    Billing Address
+                                </div>
+                                <div style="margin: 0px;" class="p-1">
+                                    <div class="bold">M/S ICAR- Directorate of Onion and Garlic Research</div>
+                                                                            Rajgurunagar, Pune-410505
+                                                                        
+                                                                        
+                                                                        
+                                                                            India <br />
+                                                                                                                <div class="bold">GSTIN :27AAAAI1830P5ZF</div>
+                                                                    </div>
+                            </td>
+                            <td colspan="4" class="p-0">
+                                <div class="border-bottom p-1">
+                                    Shipping Address
+                                </div>
+                                <div style="margin: 0px;" class="p-1">
+                                    <div class="bold">M/S ICAR- Directorate of Onion and Garlic Research</div>
+                                                                            Rajgurunagar, Pune-410505
+                                    
+                                    
+                                                                        
+                                                                        
+                                                                            India<br />
+                                                                                                                <div class="bold">GSTIN: 27AAAAI1830P5ZF </div>
+                                                                    </div>
+                            </td>
+                            <td colspan="4">
+                                <div class="info-row">
+                                    <div class="title">
+                                        Invoice No
+                                    </div>
+                                    <div class="title" style="width:3%;">
+                                        :
+                                    </div>
+                                    <div class="content">
+                                        MH/JAN/2024/861
+                                    </div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="title">
+                                        Invoice Date
+                                    </div>
+                                    <div class="title" style="width:3%;">
+                                        :
+                                    </div>
+                                    <div class="content">
+                                        20 February 2024
+                                    </div>
+                                </div>
+                                
+                                <div class="info-row">
+                                    <div class="title">
+                                        P.O. No.
+                                    </div>
+                                    <div class="title" style="width:3%;">
+                                        :
+                                    </div>
+                                    <div class="content break">
+                                        
+                                    </div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="title">
+                                        GST No
+                                    </div>
+                                    <div class="title" style="width:3%;">
+                                        :
+                                    </div>
+                                    <div class="content">
+                                        27AACCO8077G1Z5
+                                    </div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="title">
+                                        PAN No
+                                    </div>
+                                    <div class="title" style="width:3%;">
+                                        :
+                                    </div>
+                                    <div class="content">
+                                        AACCO8077G
+                                    </div>
+                                </div>
+                                
+                                <div class="info-row">
+                                    <div class="title">
+                                        PF No.
+                                    </div>
+                                    <div class="title" style="width:3%;">
+                                        :
+                                    </div>
+                                    <div class="content">
+                                        PUPUN1009883000
+                                    </div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="title">
+                                        ESIC No.
+                                    </div>
+                                    <div class="title" style="width:3%;">
+                                        :
+                                    </div>
+                                    <div class="content">
+                                        33000673570001099
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody class="head">
+                        <tr class="top-head">
+                            <th class="no" style="width:5%;">
+                                <div>SL.No</div>
+                            </th>
+                            <th class="desc" colspan="2">
+                                <div>Description</div>
+                            </th>
+                            <th>
+                                <div>HSN/SAC</div>
+                            </th>
+                            <th>
+                                <div class="break">Personnel</div>
+                            </th>
+                            <th>
+                                <div class="break">Qty/Duty</div>
+                            </th>
+                            <th>
+                                <div>Rate</div>
+                            </th>
+                            <th>
+                                <div>
+                                    Amount
+                                </div>
+                            </th>
+                        </tr>
+                    </tbody>
+                    <tbody class="body">
+                                                                                                            <tr>
+                                    <td style="width:5%;"> 1</td>
+                                    <td colspan="2" class="desc">
+                                        <h3>Bill For The Fild Operation - Rajgurunagar</h3>
+                                        
+                                    </td>
+                                    <td class="break" style="text-align:center;">
+                                        
+                                    </td>
+                                    <td style="text-align:center;">
+                                                                            </td>
+                                    <td style="text-align:right;">
+                                                                            </td>
+                                    <td style="text-align:right;">
+                                                                                    138,760.00
+                                                                            </td>
+                                    <td style="text-align:right;">
+                                        138,760.00
+                                    </td>
+                                </tr>
+                                                                                                        </tbody>
+                </table>
+                <table>
+                    <tbody class="footer">
+                        <tr>
+                                                            <td class="text-left" colspan="6">
+
+                                </td>
+                                                        <td class="text-right" colspan="6">
+                                <div class="total-row">
+                                    <div class="bold">
+                                        Sub Total
+                                    </div>
+                                    <div class="bold">
+                                        Rs. 138,760.00
+                                    </div>
+                                </div>
+                                                                                                <div class="total-row">
+                                    <div class="bold">
+                                        Grand Total
+                                    </div>
+                                    <div class="bold">
+                                        Rs. 138,760.00
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody class="footer">
+                        <tr>
+                            <td class="text-left" colspan="12">
+                                <h4 class="bold">In Words : ONE LAKH THIRTY-EIGHT THOUSAND SEVEN HUNDRED SIXTY RUPEES ONLY
+                                </h4>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody class="footer">
+                        <tr>
+                            <td class="text-left" colspan="9">
+                                
+                                <div class="total-row">
+                                    <div class="bold" style="width:20%;">
+                                        Bank Name
+                                    </div>
+                                    <div class="bold" style="width:1%;">
+                                        :
+                                    </div>
+                                    <div class="bold">
+                                                                                    IDFC FIRST Bank
+                                                                            </div>
+                                </div>
+                                <div class="total-row">
+                                    <div class="bold" style="width:20%;">
+                                        Account Name
+                                    </div>
+                                    <div class="bold" style="width:1%;">
+                                        :
+                                    </div>
+                                    <div class="bold">
+                                        OM SAI SAFEGUARD SERVICES PVT LTD
+                                    </div>
+                                </div>
+                                <div class="total-row">
+                                    <div class="bold" style="width:20%;">
+                                        Bank A/c No
+                                    </div>
+                                    <div class="bold" style="width:1%;">
+                                        :
+                                    </div>
+                                    <div class="bold">
+                                        10138575865
+                                    </div>
+                                </div>
+                                <div class="total-row">
+                                    <div class="bold" style="width:20%;">
+                                        IFSC Code
+                                    </div>
+                                    <div class="bold" style="width:1%;">
+                                        :
+                                    </div>
+                                    <div class="bold">
+                                        IDFB0041357
+                                    </div>
+                                </div>
+                                <div class="total-row">
+                                    <div class="bold" style="width:20%;">
+                                        Branch
+                                    </div>
+                                    <div class="bold" style="width:1%;">
+                                        :
+                                    </div>
+                                    <div class="bold">
+                                        WANOWRIE BRANCH
+                                    </div>
+                                </div>
+                            </td>
+                            <td colspan="3">
+                                <div class="company-name text-center">
+                                    For OM SAI SAFEGUARD SERVICES PVT LTD
+                                </div>
+                                <div class="text-center">
+                                    Authorized Signatory
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center" colspan="12">
+                                <ol>
+                                    <li>
+                                        TERMS AND CONDITIONS - ALL PAYMENTS SHOULD BE MADE ONLY THROUGH NEFT/RTGS IN
+                                        FAVOUR OF THE COMPANY
+                                    </li>
+                                </ol>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <!-- </foreignobject>
+</svg> -->
+    </html>
+
+</body>
+<script type="text/php">
+    if (isset($pdf) && $PAGE_COUNT > 1) {
+        $text = "Page {PAGE_NUM} / {PAGE_COUNT}";
+        $size = 10;
+        $font = $fontMetrics->getFont("Architecture");
+        $width = $fontMetrics->get_text_width($text, $font, $size) / 2;
+        $x = ($pdf->get_width() - $width);
+        $y = $pdf->get_height() - 35;
+        $pdf->page_text($x, $y, $text, $font, $size);
+    }
+</script>
+
+</html>
